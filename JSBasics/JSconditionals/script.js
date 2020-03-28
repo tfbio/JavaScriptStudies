@@ -66,3 +66,34 @@ else if(johnAvgScore < nickAvgScore){
     console.log('Nick wins');
 }
 else{console.log("It's a draw");}
+
+/* 4.)  One more example of the array usage, with 2 different methods
+ for updating an array, = or += and the .push method.
+*/ 
+var bills = [124, 48, 268];
+var tipsArray = [];
+function tips(billValue){
+    
+    if(billValue < 50){
+        return (billValue * 0.2);}
+
+     else if(billValue >= 50 && billValue < 200){
+        return (billValue * 0.15);}
+
+    else if(billValue >= 200){
+        return (billValue * 0.1);}
+
+    else{
+        return -1; }   
+    
+}
+
+for(var i=0; i < bills.length; i++){
+    tipsArray.push( tips(bills[i]) );
+}
+for(var i=0; i < bills.length; i++){
+    bills[i] += tipsArray[i];
+}
+
+console.log(bills);
+console.log(tipsArray);

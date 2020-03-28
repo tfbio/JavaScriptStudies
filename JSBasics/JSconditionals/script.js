@@ -97,3 +97,35 @@ for(var i=0; i < bills.length; i++){
 
 console.log(bills);
 console.log(tipsArray);
+
+/** 
+ *  5.) Starting out with objects, an object was created for each student
+ * containing differents types of var and a method 
+*/
+
+var john = {
+    fullname: 'John Wilson',
+    mass: johnMass,
+    height: johnHeight,
+
+    BMI(){
+        return this.mass/(this.height*this.height);
+    }
+}
+var nick = {
+    fullname: 'Nick Peterson',
+    mass: nickMass,
+    height: nickHeight,
+
+    BMI(){
+        return this.mass/(this.height*this.height);
+    }
+}
+//testing a function to receive a parameter which is an object
+function test(person){
+    console.log('funciton test was used');
+    console.log(person.fullname);
+}
+test(john);
+console.log(nick.BMI());
+console.log(john.BMI());
